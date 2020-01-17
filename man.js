@@ -11,15 +11,6 @@ class Man{
 
         this.bodyPartCount = 0;
     }
-
-    draw(){
-        this.head.drawHead();
-        this.body.drawBody();
-        this.arm.drawLeftArm();
-        this.arm.drawRightArm();
-        this.leg.drawLeftLeg();
-        this.leg.drawRightLeg();
-    }
 }
 
 class Head{
