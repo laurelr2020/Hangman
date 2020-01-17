@@ -4,63 +4,74 @@ class Man{
     constructor(over, down){
         this.over = over;
         this.down = down;
-        this.head = new Head();
-        this.body = new Body();
-        this.arm = new Arm();
-        this.leg = new Leg();
-    }
+        this.head = new Head(this.over, this.down);
+        this.body = new Body(this.over, this.down);
+        this.arm = new Arm(this.over, this.down);
+        this.leg = new Leg(this.over, this.down);
 
-    draw(){
-        this.head.drawHead(this.over, this.down);
-        this.body.drawBody(this.over, this.down);
-        this.arm.drawLeftArm(this.over, this.down);
-        this.arm.drawRightArm(this.over, this.down);
-        this.leg.drawLeftLeg(this.over, this.down);
-        this.leg.drawRightLeg(this.over, this.down);
+        this.bodyPartCount = 0;
     }
 }
 
-
 class Head{
-    drawHead(over, down){
+    constructor(over, down){
+        this.over = over;
+        this.down = down;
+    }
+    drawHead(){
         global.context.fillStyle = "blue";
-        global.context.fillRect(over, down, 30, 30);
-        this.drawNeck(over, down);
+        global.context.fillRect(this.over, this.down, 30, 30);
+        this.drawNeck(this.over, this.down);
     }
 
-    drawNeck(over, down){
+    drawNeck(){
         global.context.fillStyle = "blue";
-        global.context.fillRect(over + 10, down + 30, 10, 15);
+        global.context.fillRect(this.over + 10, this.down + 30, 10, 15);
     }
 }
 
 class Body{
-    drawBody(over, down){
+    constructor(over, down){
+        this.over = over;
+        this.down = down;
+    }
+
+    drawBody(){
         global.context.fillStyle = "red";
-        global.context.fillRect(over - 10, down + 40, 50, 60);
+        global.context.fillRect(this.over - 10, this.down + 40, 50, 60);
     }
 }
 
 class Arm{
-    drawLeftArm(over, down){
-        global.context.fillStyle = "blue";
-        global.context.fillRect(over - 15, down + 45, 5, 40);
+    constructor(over, down){
+        this.over = over;
+        this.down = down;
     }
 
-    drawRightArm(over, down){
+    drawLeftArm(){
         global.context.fillStyle = "blue";
-        global.context.fillRect(over + 40, down + 45, 5, 40);
+        global.context.fillRect(this.over - 15, this.down + 45, 5, 40);
+    }
+
+    drawRightArm(){
+        global.context.fillStyle = "blue";
+        global.context.fillRect(this.over + 40, this.down + 45, 5, 40);
     }
 }
 
 class Leg{
-    drawLeftLeg(over, down){
-        global.context.fillStyle = "blue";
-        global.context.fillRect(over - 5, down + 100, 10, 50);
+    constructor(over, down){
+        this.over = over;
+        this.down = down;
     }
 
-    drawRightLeg(over, down){
+    drawLeftLeg(){
         global.context.fillStyle = "blue";
-        global.context.fillRect(over + 25, down + 100, 10, 50);
+        global.context.fillRect(this.over - 5, this.down + 100, 10, 50);
+    }
+
+    drawRightLeg(){
+        global.context.fillStyle = "blue";
+        global.context.fillRect(this.over + 25, this.down + 100, 10, 50);
     }
 }
