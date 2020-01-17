@@ -39,9 +39,16 @@ function addBodyPart(){
         case 5:
             global.man.leg.drawRightLeg();
             break;
+        case 6:
+            gameOver();
+            break;
         default:
             console.log("entered default case of body part switch statement");
             break;
     }
     global.man.bodyPartCount++;
+}
+
+function gameOver(){
+    global.endGameMessage.writeMessage();
 }
