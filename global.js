@@ -12,4 +12,9 @@ class Global{
         this.context.fillStyle = "#fffdd0";
         this.context.fillRect(0, 0, 800, 800);
     }
+
+    clearBoard(){
+        this.context.clearRect(0, 0, 800, 800);
+        this.createCanvasBackground();
+    }
 }

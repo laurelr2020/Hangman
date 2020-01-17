@@ -5,7 +5,14 @@ let global;
 function init(){
     global = new Global();
     global.createCanvasBackground();
+    startGame();
+}
 
+function startGame(){
     global.pole.draw();
-    global.man.draw();
+}
+
+function restartGame(){
+    global.clearBoard();
+    startGame();
 }
