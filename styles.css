@@ -1,0 +1,9 @@
+button{
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: #4E8AA3; /* Green */
+    color: white;
+    border-radius: 45%;
+    font-size: larger;
+    padding: 12px 28px;
+}
