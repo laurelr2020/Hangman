@@ -27,28 +27,3 @@ class Pole{
         }
     }
 }
-
-// class Upright{
-
-// }
-
-// class Top{
-//     drawTop(over, down){
-//         global.context.fillStyle = "#654321";
-//         global.context.fillRect(345, 140, 120, 15);
-//     }
-// }
-
-// class Hanger{
-//     drawHanger(over, down){
-//         global.context.fillStyle = "#654321";
-//         global.context.fillRect(345, 150, 15, 25);
-//     }
-// }
-
-// class Bottom{
-//     drawBottom(over, down){
-//         global.context.fillStyle = "#654321";
-//         global.context.fillRect(325, 350, 200, 15);
-//     }
-// }
